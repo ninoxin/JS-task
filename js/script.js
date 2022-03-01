@@ -1,23 +1,11 @@
-const guestsInfo = [
-  {name: "Саша", age: 19},
-  {name: "Катя", age: 21},
-  {name: "Миша", age: 17},
-  {name: "Федя", age: 23},
-  {name: "Клава", age: 22}
-]
+const arr = [17, 23, 31, 44, 59];
 
+doubleNumber(arr); // возвращает [34,46,62,88,118];
 
-let ageSum = 0;
-const len = guestsInfo.length;
-let item = null;
-for (let i = 0; i < len; i++) {
-    item = guestsInfo[i];
-    ageSum = item.age + ageSum;
-        
+console.log(doubleNumber(arr));
+
+function doubleNumber(array) {
+  return array.map(function(num) {
+    return num * 2;
+  });
 }
-const averageage = ageSum / len;
-console.log("Average age:", averageage);
-
-
-
-
